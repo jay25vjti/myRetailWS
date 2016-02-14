@@ -24,7 +24,12 @@ public class MyRetailController {
 	    }
  further code ...
 ```
-Below configuration shows how to run the app as a standalone project in STS.
+##Installation
+1. Clone in your IDE to get latest code from this repo.
+2. I have used Maven for build and dependency management. Update the pom.xml as need may be.
+3. The packaging option in pom.xml can be changed to "war" for actual deployments in containers.
+4. 
+Below configuration shows how to run the app and changes needed.
 ###Running as stand alone app
 With this config we can run as a stand alone app in developer workstations using an IDE (preferably STS)
 ```
