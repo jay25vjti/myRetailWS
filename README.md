@@ -4,6 +4,7 @@ A REST webservice application Proof-of-Concept for a products API, which will ag
 ## Synopsis
 The API provides product details to any number of client devices from .com to mobile by making use of application/json as content type.
 The service that can retrieve product and price details by ID based on input parameters.
+The service retrives product details from external API and price details from a local data store, MongoDB in this example.
 
 ## Code Example
 The API is developed using Spring Framework with Spring Boot. The ideal IDE would be STS.
@@ -30,6 +31,9 @@ public class MyRetailController {
 2. I have used Maven. Update the pom.xml as need may be.
 3. The packaging option in pom.xml can be changed to "war" for actual deployments in containers.
 4. Update the project. In IDE right click project -> Maven -> update project.
+5. You need to configure a local noSQL data store for storing product's price and currency code. I have used mongoDB for this.
+6. To install and configure mongoDB follow steps as per [here](http://www.mkyong.com/mongodb/how-to-install-mongodb-on-windows/). I have set it up as a service for ease.
+7. To configure logging, this app uses logback. The settings can be found at logback.xml under resources. Currently the logs are written to a log file and to console. I have set app logging level to DEBUG and root to info. Based on deployment environments this can be modified.
 
 ## Running
  Below configurations show how to run the app and changes as needed.
