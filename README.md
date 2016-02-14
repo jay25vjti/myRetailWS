@@ -70,5 +70,55 @@ public class Application extends SpringBootServletInitializer {
 ```
 [Further Reading on Deploying application](https://spring.io/blog/2014/03/07/deploying-spring-boot-applications)
 
-### Testing
+## Testing
 The rest services can be tested with any rest client like SOAPUI or Postman. I have used Postman for testing.
+
+###Steps
+1. You need a rest client for invoking the services like SOAPUI or Postman. I have used Postman for my testing.
+2. Make sure the following heardes are present for local testing:
+   * Content-Type - application/json. 
+   * TOKEN - myRetailToken
+3. Make sure the correct HTTP verb is selected in client and proper URI is given while invoking the services.
+4. The list of resources available with URI, sample request and response is given below:
+
+### Resource details
+
+1. Get all product details from local data store
+   
+   VERB: GET
+
+   URI: <domain>\myretail\products
+   
+Sample response:
+```
+[
+  {
+    "id": "13860428",
+    "current_price": {
+      "value": "13.00",
+      "currency_code": "USD"
+    },
+    "name": "The description goes here"
+  }
+]
+```
+2. Get a particular product based on id.
+  
+   VERB: GET
+
+   URI: <domain>\myretail\products\v1\13860428
+   
+   Sample response:
+```
+[
+  {
+    "id": "13860428",
+    "current_price": {
+      "value": "13.00",
+      "currency_code": "USD"
+    },
+    "name": "The description goes here"
+  }
+]
+```
+  
