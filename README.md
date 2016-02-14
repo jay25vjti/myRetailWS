@@ -83,7 +83,92 @@ The rest services can be tested with any rest client like SOAPUI or Postman. I h
 
 ### Resource details
 
-1. Get all product details from local data store
+--> Get a particular product based on id.
+  
+   VERB: GET.
+
+   URI: <domain>\myretail\products\v1\13860428 (this fetches data from external api and price from local ds and aggregates response).
+        
+   URI: <domain>\myretail\products\v2\13860428 (this fetches data from locally hosted api and price from local ds and aggregates response).
+   
+   Sample response:
+```
+[
+  {
+    "id": "13860428",
+    "current_price": {
+      "value": "13.00",
+      "currency_code": "USD"
+    },
+    "name": "The description goes here"
+  }
+]
+```
+
+--> Update a product's price and currency_code in local Data Store
+
+  VERB: PUT
+  
+  URI: <domain>\myretail\products\v1\13860428  or <domain>\myretail\products\v2\13860428 (v1 for actal and v2 for local DS. However the price is present in local DS only)
+  
+   Sample response:
+```
+[
+  {
+    "id": "13860428",
+    "current_price": {
+      "value": "13.00",
+      "currency_code": "USD"
+    },
+    "name": "The description goes here"
+  }
+]
+```
+
+--> Helper resource to create product in local data store
+
+  VERB: POST
+  
+  URI: <domain>\myretail\products
+  
+  Sample request:
+  
+  ```
+{"id":13860428,"name":"The Big Lebowski (Blu-ray) (Widescreen)","current_price":{"value": 13.49,"currency_code":"USD"}}
+  ```
+  
+  Sample response:
+  
+  ```
+  {
+  "id": "13860428",
+  "current_price": {
+    "value": "13.49",
+    "currency_code": "USD"
+  },
+  "name": "The Big Lebowski (Blu-ray) (Widescreen)"
+}
+```
+
+--> Helper to delete a product from local DS
+
+   VERB: DELETE
+   
+   URI: <domain>\myretail\products\13860428
+   
+   Sample response :
+```
+{
+  "id": "13860428",
+  "current_price": {
+    "value": "13.00",
+    "currency_code": "USD"
+  },
+  "name": "The Big Lebowski (Blu-ray) (Widescreen)"
+}
+```
+
+--> Helper to get all product details from local data store
    
    VERB: GET
 
@@ -102,23 +187,3 @@ Sample response:
   }
 ]
 ```
-2. Get a particular product based on id.
-  
-   VERB: GET
-
-   URI: <domain>\myretail\products\v1\13860428
-   
-   Sample response:
-```
-[
-  {
-    "id": "13860428",
-    "current_price": {
-      "value": "13.00",
-      "currency_code": "USD"
-    },
-    "name": "The description goes here"
-  }
-]
-```
-  
