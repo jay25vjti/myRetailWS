@@ -12,13 +12,25 @@
     <!-- Name of the file where the log messages are written -->
     <file>myRetail.log</file>
     <encoder>
-      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="AUDITFILE" class="ch.qos.logback.core.FileAppender">
+    <!-- Name of the file where the log messages are written -->
+    <file>myRetailAudit.log</file>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
   </appender>
   
 <!--  Set the application log level as needed-->
 <logger name="com.myretail" level="DEBUG">
 <appender-ref ref="FILE" />
+</logger>
+
+<logger name="com.myretail.audit" level="DEBUG">
+<appender-ref ref="AUDITFILE" />
 </logger>
 
   <!-- Setting the root level of logging to INFO -->

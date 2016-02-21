@@ -7,6 +7,8 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -20,6 +22,8 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class ESAuditor {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ESAuditor.class);
 	
 	/**
 	 * A reusable pointcut for each advice.
@@ -36,7 +40,7 @@ public class ESAuditor {
 	 */
 	@AfterReturning("serviceInvocation()")
 	public void logServiceAccess(JoinPoint joinPoint) {
-		System.out.println("Completed: " + joinPoint);
+		LOGGER.info("Completed: "+joinPoint);
 		
 	}
 	
@@ -47,7 +51,7 @@ public class ESAuditor {
 	 */
 	@AfterThrowing("serviceInvocation()")
     public void logExceptions(JoinPoint joinPoint){
-        System.out.println("Exception thrown in "+joinPoint.toString());
+        LOGGER.info("Exception thrown in: "+joinPoint);
     }
 	
 	/**
@@ -60,11 +64,11 @@ public class ESAuditor {
 	 */
 	@Around("serviceInvocation()")
     public Object employeeAroundAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
-        System.out.println("Before invoking Service");
+        LOGGER.info("Before invoking Service: "+proceedingJoinPoint);
         Object value = null;
             value = proceedingJoinPoint.proceed();
         
-        System.out.println("After invoking Service. Return value="+value);
+        LOGGER.info("After invoking Service. Return value="+value);
         return value;
     }
 }

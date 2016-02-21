@@ -1,5 +1,7 @@
 package com.myretail.es.dto;
 
+import java.util.Arrays;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -32,7 +34,7 @@ public class Product_composite_response {
     @Override
     public String toString()
     {
-        return "Product_composite_response [items = "+items+", request_attributes = "+request_attributes+"]";
+        return "Product_composite_response [items = "+Arrays.toString(items)+", request_attributes = "+Arrays.toString(request_attributes)+"]";
     }
 
 }
