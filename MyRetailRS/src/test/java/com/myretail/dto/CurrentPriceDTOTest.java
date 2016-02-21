@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 /**
  * The class <code>CurrentPriceDTOTest</code> contains tests for the class <code>{@link CurrentPriceDTO}</code>.
  *
- * @generatedBy CodePro at 2/12/16 8:09 PM
+ * @generatedBy CodePro at 2/21/16 12:15 PM
  * @author jayakrishnan.s
  * @version $Revision: 1.0 $
  */
@@ -16,16 +16,38 @@ public class CurrentPriceDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testGetCurrency_code_1()
 		throws Exception {
 		CurrentPriceDTO fixture = new CurrentPriceDTO();
-		fixture.setValue("");
 		fixture.setCurrency_code("");
+		fixture.setTcin("");
+		fixture.setValue("");
 
 		String result = fixture.getCurrency_code();
+
+		// add additional test code here
+		assertEquals("", result);
+	}
+
+	/**
+	 * Run the String getTcin() method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
+	 */
+	@Test
+	public void testGetTcin_1()
+		throws Exception {
+		CurrentPriceDTO fixture = new CurrentPriceDTO();
+		fixture.setCurrency_code("");
+		fixture.setTcin("");
+		fixture.setValue("");
+
+		String result = fixture.getTcin();
 
 		// add additional test code here
 		assertEquals("", result);
@@ -36,14 +58,15 @@ public class CurrentPriceDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testGetValue_1()
 		throws Exception {
 		CurrentPriceDTO fixture = new CurrentPriceDTO();
-		fixture.setValue("");
 		fixture.setCurrency_code("");
+		fixture.setTcin("");
+		fixture.setValue("");
 
 		String result = fixture.getValue();
 
@@ -56,17 +79,39 @@ public class CurrentPriceDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testSetCurrency_code_1()
 		throws Exception {
 		CurrentPriceDTO fixture = new CurrentPriceDTO();
-		fixture.setValue("");
 		fixture.setCurrency_code("");
+		fixture.setTcin("");
+		fixture.setValue("");
 		String currency_code = "";
 
 		fixture.setCurrency_code(currency_code);
+
+		// add additional test code here
+	}
+
+	/**
+	 * Run the void setTcin(String) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
+	 */
+	@Test
+	public void testSetTcin_1()
+		throws Exception {
+		CurrentPriceDTO fixture = new CurrentPriceDTO();
+		fixture.setCurrency_code("");
+		fixture.setTcin("");
+		fixture.setValue("");
+		String tcin = "";
+
+		fixture.setTcin(tcin);
 
 		// add additional test code here
 	}
@@ -76,14 +121,15 @@ public class CurrentPriceDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testSetValue_1()
 		throws Exception {
 		CurrentPriceDTO fixture = new CurrentPriceDTO();
-		fixture.setValue("");
 		fixture.setCurrency_code("");
+		fixture.setTcin("");
+		fixture.setValue("");
 		String value = "";
 
 		fixture.setValue(value);
@@ -96,19 +142,20 @@ public class CurrentPriceDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testToString_1()
 		throws Exception {
 		CurrentPriceDTO fixture = new CurrentPriceDTO();
-		fixture.setValue("");
 		fixture.setCurrency_code("");
+		fixture.setTcin("");
+		fixture.setValue("");
 
 		String result = fixture.toString();
 
 		// add additional test code here
-		assertEquals("Current_price [value = , currency_code = ]", result);
+		assertEquals("CurrentPriceDTO [value=, currency_code=, tcin=]", result);
 	}
 
 	/**
@@ -117,7 +164,7 @@ public class CurrentPriceDTOTest {
 	 * @throws Exception
 	 *         if the initialization fails for some reason
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Before
 	public void setUp()
@@ -131,7 +178,7 @@ public class CurrentPriceDTOTest {
 	 * @throws Exception
 	 *         if the clean-up fails for some reason
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@After
 	public void tearDown()
@@ -144,7 +191,7 @@ public class CurrentPriceDTOTest {
 	 *
 	 * @param args the command line arguments
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:09 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	public static void main(String[] args) {
 		new org.junit.runner.JUnitCore().run(CurrentPriceDTOTest.class);

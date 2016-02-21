@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 /**
  * The class <code>MyRetailDTOTest</code> contains tests for the class <code>{@link MyRetailDTO}</code>.
  *
- * @generatedBy CodePro at 2/12/16 8:10 PM
+ * @generatedBy CodePro at 2/21/16 12:15 PM
  * @author jayakrishnan.s
  * @version $Revision: 1.0 $
  */
@@ -16,23 +16,24 @@ public class MyRetailDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testGetCurrent_price_1()
 		throws Exception {
 		MyRetailDTO fixture = new MyRetailDTO();
-		fixture.setId("");
-		fixture.setName("");
 		fixture.setCurrent_price(new CurrentPriceDTO());
+		fixture.setName("");
+		fixture.setId("");
 
 		CurrentPriceDTO result = fixture.getCurrent_price();
 
 		// add additional test code here
 		assertNotNull(result);
-		assertEquals("Current_price [value = null, currency_code = null]", result.toString());
+		assertEquals("CurrentPriceDTO [value=null, currency_code=null, tcin=null]", result.toString());
 		assertEquals(null, result.getValue());
 		assertEquals(null, result.getCurrency_code());
+		assertEquals(null, result.getTcin());
 	}
 
 	/**
@@ -40,15 +41,15 @@ public class MyRetailDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testGetId_1()
 		throws Exception {
 		MyRetailDTO fixture = new MyRetailDTO();
-		fixture.setId("");
-		fixture.setName("");
 		fixture.setCurrent_price(new CurrentPriceDTO());
+		fixture.setName("");
+		fixture.setId("");
 
 		String result = fixture.getId();
 
@@ -61,15 +62,15 @@ public class MyRetailDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testGetName_1()
 		throws Exception {
 		MyRetailDTO fixture = new MyRetailDTO();
-		fixture.setId("");
-		fixture.setName("");
 		fixture.setCurrent_price(new CurrentPriceDTO());
+		fixture.setName("");
+		fixture.setId("");
 
 		String result = fixture.getName();
 
@@ -82,15 +83,15 @@ public class MyRetailDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testSetCurrent_price_1()
 		throws Exception {
 		MyRetailDTO fixture = new MyRetailDTO();
-		fixture.setId("");
-		fixture.setName("");
 		fixture.setCurrent_price(new CurrentPriceDTO());
+		fixture.setName("");
+		fixture.setId("");
 		CurrentPriceDTO current_price = new CurrentPriceDTO();
 
 		fixture.setCurrent_price(current_price);
@@ -103,15 +104,15 @@ public class MyRetailDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testSetId_1()
 		throws Exception {
 		MyRetailDTO fixture = new MyRetailDTO();
-		fixture.setId("");
-		fixture.setName("");
 		fixture.setCurrent_price(new CurrentPriceDTO());
+		fixture.setName("");
+		fixture.setId("");
 		String id = "";
 
 		fixture.setId(id);
@@ -124,15 +125,15 @@ public class MyRetailDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testSetName_1()
 		throws Exception {
 		MyRetailDTO fixture = new MyRetailDTO();
-		fixture.setId("");
-		fixture.setName("");
 		fixture.setCurrent_price(new CurrentPriceDTO());
+		fixture.setName("");
+		fixture.setId("");
 		String name = "";
 
 		fixture.setName(name);
@@ -145,20 +146,20 @@ public class MyRetailDTOTest {
 	 *
 	 * @throws Exception
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Test
 	public void testToString_1()
 		throws Exception {
 		MyRetailDTO fixture = new MyRetailDTO();
-		fixture.setId("");
-		fixture.setName("");
 		fixture.setCurrent_price(new CurrentPriceDTO());
+		fixture.setName("");
+		fixture.setId("");
 
 		String result = fixture.toString();
 
 		// add additional test code here
-		assertEquals("MyRetailDTO [id = , current_price = Current_price [value = null, currency_code = null], name = ]", result);
+		assertEquals("MyRetailDTO [id = , current_price = CurrentPriceDTO [value=null, currency_code=null, tcin=null], name = ]", result);
 	}
 
 	/**
@@ -167,7 +168,7 @@ public class MyRetailDTOTest {
 	 * @throws Exception
 	 *         if the initialization fails for some reason
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@Before
 	public void setUp()
@@ -181,7 +182,7 @@ public class MyRetailDTOTest {
 	 * @throws Exception
 	 *         if the clean-up fails for some reason
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	@After
 	public void tearDown()
@@ -194,7 +195,7 @@ public class MyRetailDTOTest {
 	 *
 	 * @param args the command line arguments
 	 *
-	 * @generatedBy CodePro at 2/12/16 8:10 PM
+	 * @generatedBy CodePro at 2/21/16 12:15 PM
 	 */
 	public static void main(String[] args) {
 		new org.junit.runner.JUnitCore().run(MyRetailDTOTest.class);
